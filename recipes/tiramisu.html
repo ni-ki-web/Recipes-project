@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Stylesheet -->
+    <!-- Link ro Stylesheet -->
     <link rel="stylesheet" href="../recipe-page.css">
 
-    <!-- Font Awesome Link -->
+    <!-- Google Font Link -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap">
+        
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <title> Tiramisu Recipe Page </title>
@@ -16,11 +19,17 @@
 
 <body>
     <main class="content-wrapper">
-        <a href="/" class="back-button">
-            <div class="bck-btn">← Back to Recipes</div>
+        <!-- Back to homepage link -->
+        <a href="../index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> Back to Homepage
         </a>
+
+        <!-- Main Recipe Content -->
         <div class="recipe-content-wrapper">
+            <!-- Recipe Image -->
             <img src="../images/teramisu.jpeg" alt="A piece of tiramisu on a plate" class="recipe-img"> 
+            
+            <!-- Recipe Title & Description -->
             <div class="recipe-container">
                 <h1 class="recipe-title">Easy Tiramisu Recipe</h1>
                 <p class="recipe-description">This delicious and unbelievably easy 
@@ -29,6 +38,8 @@
                     on top. It requires no baking and can be made in advance!
                 </p> 
             </div>
+
+            <!-- Prep time summary -->
             <div class="prep-time">
                 <p class="prep-title">Preparation Time</p>
                 <ul class="prep-list">
@@ -37,6 +48,7 @@
                 </ul>
             </div>
 
+            <!-- Ingredients section -->
             <section class="recipe-ingredients">
                 <h2>Ingredients you'll need:</h2>
                 <ul class="ingredient-list">
@@ -50,6 +62,7 @@
                 </ul>
             </section>
 
+            <!-- Directions section -->
             <section class="recipe-instructions">
                 <h2>How to make a Tiramisu:</h2>
                 <ol class="instruction-list">
@@ -72,6 +85,7 @@
                 </ol>
             </section>
 
+            <!-- Recipe notes -->
             <section class="recipe-notes">
                 <h2>Notes</h2>
                 <ul class="note-list">
@@ -89,6 +103,7 @@
                 </ul>
             </section>
 
+            <!-- Nutrition Info -->
             <section class="nutritional-value">
                 <h2>Nutrition</h2>
                 <p>The table below shows the nutritional values per serving.</p>
@@ -115,8 +130,8 @@
                     </tr>
                 </table>
             </section>
-        </div>
+        </div>  <!-- end of recipe-content-wrapper -->
     </main>
 </body>
 
-</html>
+</html> 

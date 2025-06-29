@@ -14,6 +14,10 @@ This is a beginner-level web development project where I am building a simple re
 - Gradually add JavaScript to enhance interactivity
 - Continuously expand and refactor the project as I learn new concepts
 
+## Live Preview
+
+[View Site](https://ni-ki-web.github.io/Recipes-project/)
+
 ---
 
 This project will evolve as I continue learning and applying new web development skills.
