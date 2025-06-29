@@ -8,6 +8,9 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="../recipe-page.css">
 
+    <!-- Google Font Link -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap">
+        
     <!-- Font Awesome Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
@@ -17,12 +20,18 @@
 
 <body>
     <main class="content-wrapper">
-        <a href="/" class="back-button">
-            <div class="bck-btn">← Back to Recipes</div>
+        <!-- Back to homepage link -->
+        <a href="../index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> Back to Homepage
         </a>
+
+        <!-- Main Recipe Content -->
         <div class="recipe-content-wrapper">
+            <!-- Recipe Image -->
             <img src="../images/mini-pancake-parfait.jpeg" alt="mini pancakes layered with fresh fruits and yoghurt in a glass"
             class="recipe-img"> 
+
+            <!-- Recipe Title & Description -->
             <div class="recipe-container">
                 <h1 class="recipe-title">Mini Pancake Parfait</h1>
                 <p class="recipe-description">Teeny pancakes get the parfait treatment when they are layered with 
@@ -30,6 +39,7 @@
                 </p>      
             </div>
 
+            <!-- Prep time summary -->
             <div class="prep-time">
                 <ul class="prep-list">
                     <li><b>Total Time: </b>10 minutes</li>
@@ -39,6 +49,7 @@
                 </ul>
             </div>
 
+            <!-- Ingredients section -->
             <section class="recipe-ingredients">
                 <h2>Ingredients you'll need:</h2>
                 <ul class="ingredient-list">
@@ -50,6 +61,7 @@
                     </ul>
             </section>
 
+            <!-- Directions section -->
             <section class="recipe-instructions">
                 <h2>Directions:</h2>
                 <ol class="instruction-list">
@@ -60,6 +72,7 @@
                 </ol>
             </section>
 
+            <!-- Nutrition info -->
             <section class="nutritional-value">
                 <h2>Nutrition</h2>
                 <p>The table below shows the nutritional values per serving.</p>
@@ -86,7 +99,7 @@
                     </tr>
                 </table>
             </section>
-        </div>
+        </div>  <!-- end of recipe-content-wrapper-->
     </main>
 </body>
 

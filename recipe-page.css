@@ -1,15 +1,54 @@
+/* Root Variables for Colours and Fonts */
+:root {
+    --text-main: #333;
+    --accent-color: #d97373;
+    --accent-light: #fbecec;
+    --border-color: #e0caca;
+    --font-body: 'Roboto', sans-serif;
+    --font-heading: 'Poppins', serif;
+}
+
+/* General Reset and Base Styles */
 body {
     box-sizing: border-box;
-    font-family: Verdana, Tahoma, sans-serif;
+    font-family: var(--font-body);
     line-height: 1.5;
     font-size: 1rem;
     background-color: white;
-    color: black;
+    color: var(--text-main);
 }
 
+h1, h2 {
+    line-height: 1.2;
+    font-family: var(--font-heading);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+li{
+    padding-left: 1rem;
+    margin-bottom: 0.5rem; 
+}
+
+li::marker {
+    font-weight: 600;
+}
+
+/* Title Styling */
 .title {
     text-align: center;
     font-size: 2rem;
+}
+
+/* Layout Container */
+.content-wrapper {
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 950px;
+}
+
+.recipe-wrapper {
+    padding: 10px;
 }
 
 .recipe-grid-container {
@@ -25,10 +64,11 @@ body {
     }
 }
 
+/* Recipe Cards */
 .recipe-grid-content {
     text-align: center;
     overflow: hidden;
-    border: 1px solid pink;
+    border: 1px solid var(--border-color);
     border-radius: 10px;
     transition: 0.3s ease;
     padding: 10px;
@@ -37,10 +77,10 @@ body {
 .recipe-grid-content:hover {
     transform: scale(1.02);
     transition: transform 0.2s ease;
-    background-color: rgb(255, 220, 226);
-    box-shadow: 0 4px 12px rgb(255, 220, 226);
+    background-color: var(--accent-light);
+    box-shadow: 0 4px 12px rgb(249, 200, 200, 0.6);
     text-decoration: underline;
-    color: #e75480;
+    color: var(--accent-color);
 }
 
 .recipe-link {
@@ -56,7 +96,7 @@ body {
 }
 
 .img {
-    border-radius: 15px;
+    border-radius: 10px;
     height: 100%;
     width: 100%;
     display: block;
@@ -65,90 +105,94 @@ body {
 
 .select-recipe {
     text-align: center;
-    padding-left: 1rem;
     font-size: 1.4rem;
 }
 
-.recipe-wrapper {
-    padding: 10px;
-}
-
 .back-button {
-    color: #000;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: calc(100% - 2rem);
+    padding: 10px 16px;
+    margin: 0 auto 1.5rem;
+    font-size: 1rem;
+    border: 1px solid var(--text-main);
+    border-radius: 8px;
+    background-color: white;
+    color: var(--text-main);
     text-decoration: none;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
 }
 
-.bck-btn {
-    margin: 10px 30px;
-    padding: 12px;
-    border: 1px solid #000;
-    border-radius: 10px;
+.back-button i {
+    font-size: 1rem;
+    transition: transform 0.2s ease;
 }
 
-.bck-btn:hover {
-    transition: 0.2s ease;
-    background-color: #e75480;
-    color:#fff;
-    border: 1px solid #e75480;
+.back-button:hover {
+    background-color: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
 }
 
-.content-wrapper {
-    margin: 0 auto;
-    padding: 1rem;
+.back-button:hover i {
+    transform: translateX(-4px);
+}
+
+/* Recipe Page */
+.recipe-content-wrapper {
+    margin: 1rem;
+    padding: 1.75rem;
+    border-radius: 1.5rem;
+    border: solid 2px var(--border-color);
+    background-color: var(--accent-light);
 }
 
 .recipe-img {
     width: 100%;
     max-height: 500px;
     object-fit: cover;
-    border-radius: .75rem;
-}
-
-
-h1, h2 {
-    line-height: 1.2;
-    font-family: Georgia;
-    margin-bottom: 1.5rem;
-    font-weight: 600;
+    border-radius: 0.75rem;
 }
 
 .recipe-title {
     font-size: 2.5rem;
 }
 
-
-[data-cell="nutrient-value"] {
-    font-weight: 600;
-}
-
-li{
-    padding-left: 1rem;
-    margin-bottom: .5rem; 
-}
-
-li::marker {
-    font-weight: 600;
-}
-
-.recipe-content-wrapper {
-    margin: 2rem;
-    padding: 1.75rem;
-    border-radius: 1.5rem;
-    border: solid 2px pink;
-    background-color: #fff0f5;
+/* Recipe Sections */
+section {
+    margin-top: 2.5rem;
 }
 
 section {
     margin-top: 2.5rem;
 }
 
+.section::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--border-color);
+    margin: 2.5rem 0;
+}
+
+.section:last-child::after {
+    display: none;
+}
+
+/* Prep Time Card */
 .prep-time {
-    /* background: #e7f4fd; */
-    border: solid 1px  #57caff;
+    border: solid 1px #57caff;
     padding: 1rem;
     border-radius: .75rem;
     margin-top: 2rem;
     border-top: solid 15px #57caff;
+}
+
+.nutrition-value {
+    overflow-x: auto;
 }
 
 table {
@@ -156,26 +200,13 @@ table {
     border-collapse: collapse; 
 }
 
-.nutrition-value {
-    overflow-x: auto;
-}
-
 tr {
     display: flex;
     justify-content: space-between;
     padding: .5rem 0;
-    border-bottom: 1px solid pink;
+    border-bottom: 1px solid var(--border-color);
 }
 
-section::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 2px;
-    background: pink;
-    margin: 2.5rem 0;
-}
-
-section:last-child::after {
-    display: none;
+[data-cell="nutrient-value"] {
+    font-weight: 600;
 }
