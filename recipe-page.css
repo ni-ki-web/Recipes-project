@@ -1,36 +1,35 @@
 /* Root Variables for Colours and Fonts */
 :root {
-    --text-main: #333;
-    --accent-color: #d97373;
-    --accent-light: #fbecec;
-    --border-color: #e0caca;
+    --text-main: #2a2a2a;              /* Deep soft black */
+    --accent-color: #d97373;           
+    --accent-light: #fbecec;           
+    --border-color: #d6c4c4;           /* Soft beige-pink */
+    --section-bg: #fff9f6;             /* Very soft cream-pink */  
     --font-body: 'Roboto', sans-serif;
     --font-heading: 'Poppins', serif;
 }
 
-/* General Reset and Base Styles */
+/* Base Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
-    box-sizing: border-box;
     font-family: var(--font-body);
-    line-height: 1.5;
+    line-height: 1.7;
+    padding: 0;
+    margin: 0;
     font-size: 1rem;
     background-color: white;
     color: var(--text-main);
 }
 
 h1, h2 {
-    line-height: 1.2;
+    line-height: 1.3;
     font-family: var(--font-heading);
-    margin-bottom: 1.5rem;
-    font-weight: 600;
-}
-
-li{
-    padding-left: 1rem;
-    margin-bottom: 0.5rem; 
-}
-
-li::marker {
+    margin-bottom: 1rem;
     font-weight: 600;
 }
 
@@ -40,22 +39,28 @@ li::marker {
     font-size: 2rem;
 }
 
+@media (max-width: 500px) {
+    .title {
+        font-size: 1.6rem;
+    }
+}
+
 /* Layout Container */
 .content-wrapper {
     margin: 0 auto;
-    padding: 1rem;
+    padding: 1.5rem;
     max-width: 950px;
 }
 
 .recipe-wrapper {
-    padding: 10px;
+    padding: 1rem 0;
 }
 
 .recipe-grid-container {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 1rem;
+    gap: 2rem;
+    padding: 1rem 0;
 }
 
 @media (min-width: 700px) {
@@ -69,16 +74,15 @@ li::marker {
     text-align: center;
     overflow: hidden;
     border: 1px solid var(--border-color);
-    border-radius: 10px;
-    transition: 0.3s ease;
-    padding: 10px;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    padding: 1rem;
 }
 
 .recipe-grid-content:hover {
     transform: scale(1.02);
-    transition: transform 0.2s ease;
     background-color: var(--accent-light);
-    box-shadow: 0 4px 12px rgb(249, 200, 200, 0.6);
+    box-shadow: 0 2px 6px rgb(249, 200, 200, 0.6);
     text-decoration: underline;
     color: var(--accent-color);
 }
@@ -86,6 +90,8 @@ li::marker {
 .recipe-link {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 1rem;
     text-decoration: none;
     color: inherit;
 }
@@ -93,10 +99,10 @@ li::marker {
 .image-wrapper {
     aspect-ratio: 4 / 3;
     overflow: hidden;
+    border-radius: 8px;
 }
 
 .img {
-    border-radius: 10px;
     height: 100%;
     width: 100%;
     display: block;
@@ -105,19 +111,20 @@ li::marker {
 
 .select-recipe {
     text-align: center;
+    margin-top: 1rem;
     font-size: 1.4rem;
 }
 
 .back-button {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     width: calc(100% - 2rem);
-    padding: 10px 16px;
-    margin: 0 auto 1.5rem;
+    padding: 0.75rem 1.25rem;
+    margin: 0 2rem 1.3rem 1.3rem;
     font-size: 1rem;
-    border: 1px solid var(--text-main);
-    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
     background-color: white;
     color: var(--text-main);
     text-decoration: none;
@@ -143,14 +150,15 @@ li::marker {
 /* Recipe Page */
 .recipe-content-wrapper {
     margin: 1rem;
-    padding: 1.75rem;
-    border-radius: 1.5rem;
-    border: solid 2px var(--border-color);
-    background-color: var(--accent-light);
+    padding: 2rem;
+    border-radius: 1rem;
+    border: solid 1px var(--border-color);
+    background-color: var(--section-bg);
 }
 
 .recipe-img {
     width: 100%;
+    height: auto;
     max-height: 500px;
     object-fit: cover;
     border-radius: 0.75rem;
@@ -158,55 +166,74 @@ li::marker {
 
 .recipe-title {
     font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
 }
 
-/* Recipe Sections */
+/* Section Styling */
 section {
     margin-top: 2.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
 }
 
-section {
-    margin-top: 2.5rem;
+/* Lists */
+li{
+    padding-left: 1rem;
+    margin-bottom: 0.5rem; 
 }
 
-.section::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 2px;
-    background: var(--border-color);
-    margin: 2.5rem 0;
-}
-
-.section:last-child::after {
-    display: none;
+li::marker {
+    font-weight: 600;
 }
 
 /* Prep Time Card */
 .prep-time {
-    border: solid 1px #57caff;
+    border: solid 1px var(--accent-color);
     padding: 1rem;
-    border-radius: .75rem;
+    border-radius: 0.75rem;
     margin-top: 2rem;
-    border-top: solid 15px #57caff;
+    border-top: solid 10px var(--accent-color);
+    background-color: var(--accent-light);
 }
 
-.nutrition-value {
-    overflow-x: auto;
-}
-
+/* Nutrition Table */
 table {
     width: 100%;
     border-collapse: collapse; 
+    margin-top: 1rem;
 }
 
 tr {
     display: flex;
     justify-content: space-between;
-    padding: .5rem 0;
+    padding: .75rem 0;
     border-bottom: 1px solid var(--border-color);
 }
 
-[data-cell="nutrient-value"] {
+td[data-cell="nutrient"] {
+    font-weight: 500;
+}
+
+td[data-cell="nutrient-value"] {
     font-weight: 600;
+    color: var(--accent-color);
+}
+
+.nutritional-value {
+    background-color: var(--accent-light);
+    padding: 1rem 1.5rem;
+    border-radius: 0 0 0.75rem 0.75rem;
+    overflow-x: auto;
+}
+
+.site-footer {
+  background-color: var(--accent-light);
+  border-top: 1px solid var(--border-color);
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+  text-align: center;
+  font-family: var(--font-body);
+  color: var(--text-main);
+  font-size: 0.8rem;
 }
