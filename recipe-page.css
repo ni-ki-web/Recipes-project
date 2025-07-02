@@ -1,8 +1,8 @@
 /* Root Variables for Colours and Fonts */
 :root {
     --text-main: #2a2a2a;              /* Deep soft black */
-    --accent-color: #c76b63;           /* Warm terracotta/rose */
-    --accent-light: #f9efec;           /* Light peach-pink background */
+    --accent-color: #d97373;           
+    --accent-light: #fbecec;           
     --border-color: #d6c4c4;           /* Soft beige-pink */
     --section-bg: #fff9f6;             /* Very soft cream-pink */  
     --font-body: 'Roboto', sans-serif;
