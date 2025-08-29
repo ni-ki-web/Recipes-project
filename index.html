@@ -3,19 +3,14 @@
 <head>
     <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <!-- Stylesheet -->
         <link rel="stylesheet" href="recipe-page.css">
-
         <!-- Font Awesome Link -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   
         <!-- Google Font Link -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap">
-        
-        <!-- Favicon link -->
-        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-       
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
         <title> My Recipes </title>
 
 </head>
@@ -24,56 +19,50 @@
     <main class="content-wrapper">
         <!-- Main Title -->
         <h1 class="title">My Recipes</h1>
-
-        <!-- Container for all recipe cards -->
-            <div class="recipe-wrapper">
-                <div class="recipe-grid-container">
-
-                    <!-- Individual recipe card-->
-                    <div class="recipe-grid-content">
-                        <a href="recipes/tiramisu.html" class="recipe-link">
-                            <h2 class="select-recipe">Easy Tiramisu Recipe</h2>
-                            <div class="image-wrapper">
-                                <img src="images/teramisu.jpeg" alt="Tiramisu on a plate" class="img">
-                            </div>
-                        </a>
-                    </div>
-                    <!-- Individual recipe card-->
-                    <div class="recipe-grid-content">
-                        <a href="recipes/mini-pancake-parfait.html" class="recipe-link">
-                            <h2 class="select-recipe">Mini Pancake Parfait </h2>
-                            <div class="image-wrapper">
-                                <img src="images/mini-pancake-parfait.jpeg" alt="mini pancakes layered with fresh fruits and yoghurt in a glass" class="img">
-                            </div>  
-                        </a>    
-                    </div>
-                    <!-- Individual recipe card-->
-                    <div class="recipe-grid-content">
-                        <a href="recipes/crispy-potato-pancake.html" class="recipe-link">
-                            <h2 class="select-recipe">Crispy Potato Pancake </h2>
-                            <div class="image-wrapper">
-                                <img src="images/potato-pancake.jpeg" alt="crispy mashed potato pancake sliced like pizza" class="img">
-                            </div>  
-                        </a>    
-                    </div>
-                    <!-- Individual recipe card-->
-                    <div class="recipe-grid-content">
-                        <a href="recipes/rice-pudding.html" class="recipe-link">
-                            <h2 class="select-recipe">Kheer (rice pudding) </h2>
-                            <div class="image-wrapper">
-                                <img src="images/rice-pudding.jpeg" alt="Rice pudding in bowl topped with chapped nuts" class="img">
-                            </div>  
-                        </a>   
-                    </div>
-                </div>  <!-- end of recipe-grid-container --> 
-            </div>   <!-- end of recipe-wrapper --> 
+        <div class="recipe-wrapper">
+            <div class="recipe-grid-container">
+                <!-- Recipe card 1 - Tiramisu -->
+                <div class="recipe-card">
+                    <a href="recipe.html?recipe=tiramisu" class="recipe-link">
+                        <img src="images/tiramisu.jpeg" alt="Tiramisu" class="recipe-thumb" />
+                        <h2 class="select-recipe">Tiramisu</h2>
+                    </a>
+                </div>
+                <!-- Recipe card 2 - Crispy Potato Pancake -->
+                <div class="recipe-card">
+                    <a href="recipe.html?recipe=potato-pancake" class="recipe-link">
+                        <img src="images/potato-pancake.jpeg" alt="Crispy Mashed Potato Pancake" class="recipe-thumb"/>
+                        <h2 class="select-recipe">Cripsy Potato pancake</h2>
+                    </a>
+                </div>
+                <!-- Recipe card 3 - Rice Pudding -->
+                <div class="recipe-card">
+                    <a href="recipe.html?recipe=rice-pudding" class="recipe-link">
+                        <img src="images/rice-pudding.jpeg" alt="Rice Pudding in abowl topped with dry fruits." class="recipe-thumb"/>
+                        <h2 class="select-recipe">Rice Pudding</h2>
+                    </a>
+                </div>
+                <!-- Recipe card 4 - Mini Pancake Parfait -->
+                <div class="recipe-card">
+                    <a href="recipe.html?recipe=mini-pancake-parfait" class="recipe-link">
+                        <img src="images/mini-pancake-parfait.jpeg" alt="Mini pancake parfait with whip cream and berries." class="recipe-thumb"/>
+                        <h2 class="select-recipe">Mini Pancake Parfait</h2>
+                    </a>
+                </div>
+                <!-- Recipe card 5 - Fluffy Pancake -->
+                <div class="recipe-card">
+                    <a href="recipe.html?recipe=fluffy-pancake" class="recipe-link">
+                        <img src="images/fluffy-pancakes.jpeg" alt="Stack of pancakes topped butter and maple syrup." class="recipe-thumb"/>
+                        <h2 class="select-recipe">Delicious Fluffy Pancakes</h2>
+                    </a>
+                </div>
+            </div>
+        </div>
     </main> 
 
     <footer class="site-footer">
         <p>© 2025 My Recipe Collection | Curated by Nikita</p>
     </footer>
-
-    <script src = "main.js"></script>
 
 </body>
 </html>
