@@ -51,7 +51,7 @@ This is a work in progress, and I plan to keep building on it as I learn more. U
 ## Branches
 
 - `main` - dynamic version (current live version)
-- `static-version` - original static HTML/CSS version
+- `static-version` - original static HTML/CSS version [view static repo](https://github.com/ni-ki-web/Recipes-project/tree/static-version)
 
 
 ## Live Demo
