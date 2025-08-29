@@ -8,7 +8,7 @@ body {
 .content-wrapper {
     max-width: 900px;
     margin: auto;
-    padding: 2rem 1rem;
+    padding: 1rem;
 }
 
 .title {
@@ -26,6 +26,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .recipe-card {
@@ -197,4 +198,27 @@ section {
 .nutrition-table td:last-child {
   text-align: right;
   color: #555;
+}
+
+/* Recipe Credit Styling */
+.recipe-credit {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-left: 4px solid #3ba8f5; /* a colored accent bar */
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #555;
+}
+
+.recipe-credit a {
+  color: #3ba8f5;             /* make the link match your theme */
+  font-weight: 600;
+  text-decoration: none;      /* remove underline */
+  transition: color 0.2s ease, border-bottom 0.2s ease;
+}
+
+.recipe-credit a:hover {
+  color: #2685e4;             /* darker shade on hover */
+  border-bottom: 1px solid #2685e4; /* subtle underline effect */
 }
